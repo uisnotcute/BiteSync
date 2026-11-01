@@ -1,0 +1,12 @@
+import { Router, type IRouter } from "express";
+import healthRouter from "./health";
+import savedRecipesRouter from "./saved-recipes";
+import videoMetadataRouter from "./video-metadata";
+
+const router: IRouter = Router();
+
+router.use(healthRouter);
+router.use(videoMetadataRouter);
+router.use(savedRecipesRouter);
+
+export default router;
